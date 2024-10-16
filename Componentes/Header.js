@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { Link } from 'expo-router';
 
-const Header = () => {
-    const [hoveredText, setHoveredText] = useState(null); // State to manage hovered text
+const Header = ({ navigation }) => {
+    const [hoveredText, setHoveredText] = useState(null); // Hover do texto
 
     const navItems = ['Phones', 'Earbuds', 'Offers', 'Support'];
 
@@ -33,9 +34,14 @@ const Header = () => {
                 <TouchableOpacity style={styles.icon}>
                     <FontAwesome name="search" size={24} color="black" />
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.icon}>
-                    <FontAwesome name="shopping-cart" size={24} color="black" />
-                </TouchableOpacity>
+
+                {/* Aqui o ícone de carrinho com um Link para a rota "cart" */}
+                <Link href="/cart" asChild>
+                    <TouchableOpacity style={styles.icon}>
+                        <FontAwesome name="shopping-cart" size={24} color="black" />
+                    </TouchableOpacity>
+                </Link>
+
                 <TouchableOpacity style={styles.icon}>
                     <FontAwesome name="user" size={24} color="black" />
                 </TouchableOpacity>

@@ -1,11 +1,9 @@
 import { ScrollView, View } from "react-native-web";
-import CartHeader from "./Componentes/CartHeader";
-import OrderSummary from "./Componentes/OrderSummary";
-import ProductSummary from "./Componentes/ProductSummary";
+import CartHeader from "../Componentes/CartHeader";
+import OrderSummary from "../Componentes/OrderSummary";
+import ProductSummary from "../Componentes/ProductSummary";
 
 const Cart = (props) => {
-    const [quantity, setQuantity] = {}
-
     return (
         <View>
             <CartHeader cart={props.cart} />
@@ -25,3 +23,5 @@ const Cart = (props) => {
         </View>
     )
 }
+
+export default Cart;

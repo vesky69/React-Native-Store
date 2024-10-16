@@ -1,11 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, ScrollView } from 'react-native';
-import Header from './Componentes/Header';
-import Filter from './Componentes/Filter';
+import { StyleSheet, Text, ScrollView } from 'react-native';
+import Header from '../Componentes/Header';
+import Filter from '../Componentes/Filter';
 
 export default function App() {
   return (
-      <ScrollView >
+      <ScrollView style={{ flex: 1 }}>
         <Header />
         <Text style={styles.subTitle}>Special offers</Text>
         <Text style={styles.title}>Shop the latest deals.</Text>
